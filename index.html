@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Transformer Activation Tools</title>
+
+    <meta name="description" content="Transformer Activation Tools: Tools for exploring Transformer neuron behaviour, including input pruning and diversification">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+        <!--FACEBOOK-->
+    <meta property="og:image" content="https://transformer-activation-tools.pages.dev//img/graph_10_examples_n_20.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="682">
+    <meta property="og:image:height" content="682">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://transformer-activation-tools.pages.dev/"/>
+    <meta property="og:title" content="Transformer Activation Tools" />
+    <meta property="og:description" content="Project page for Transformer Activation Tools: Tools for exploring Transformer neuron behaviour, including input pruning and diversification." />
+
+        <!--TWITTER-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SayCan" />
+    <meta name="twitter:description" content="Project page for Transformer Activation Tools: Tools for exploring Transformer neuron behaviour, including input pruning and diversification." />
+    <meta name="twitter:image" content="https://transformer-activation-tools.pages.dev//img/graph_10_examples_n_20.png" />
+
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="icon" type="image/png" href="img/seal_icon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-52J0PM8XKV');
+</script>
+	
+    <style>
+        .nav-pills {
+          position: relative;
+          display: inline;
+        }
+        .imtip {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                <b><font size="+6">Transformer Activation Tools: </font></b>: </br> Tools for exploring Transformer neuron behaviour, including input pruning and diversification
+
+            </br> 
+                <!--<small>
+                    CoRL 2021
+                </small>-->
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                <br>
+                <li>Anonymous authors*</li>
+                <br><br>
+                    <!-- <a href="http://g.co/robotics">
+                    <image src="img/robotics-at-google.png" height="40px"> Apart Research</a>
+                    <a href="https://everydayrobots.com">
+                    <image src="img/EverydayRobots2.gif" height="40px"> Everyday Robots</a> <br><br> -->
+                    * Authors anonymized for review
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="assets/transformer-activation-tools.pdf">
+                            <image src="img/paper_small.png" height="60px">
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                    <!-- <li>
+                            <a href="https://youtu.be/ysFav0b472w">
+                            <image src="img/youtube_icon.png" height="60px">
+                                <h4><strong>Video</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ai.googleblog.com/2022/08/towards-helpful-robots-grounding.html">
+                            <image src="img/google-ai-blog-small.png" height="60px">
+                                <image src="img/new.png" height="20px" class="imtip">
+                                <h4><strong>Blogpost</strong></h4>
+                            </a>
+                        </li> 
+                         <li>
+                            <a href="https://github.com/google-research/google-research/tree/master/saycan">
+                            <image src="img/github.png" height="60px">
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+        </div>
+
+         <!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+           
+                <h3>
+                    What's New
+                </h3>
+                <p class="text-justify">
+
+                <ul>
+                    <li> <font color="#5a00b4">[8/16/2022]</font> We integrated SayCan with <a href="https://ai.googleblog.com/2022/04/pathways-language-model-palm-scaling-to.html">Pathways Language Model (PaLM)</a>, and updated the results. We also added <a href="#new-capability"> new capabilities</a> including drawer manipulation, chain of thought prompting and multilingual instructions. You can see all the new results in the updated <a href="assets/palm_saycan.pdf">paper</a>.</li>
+                    <li><font color="#5a00b4">[8/16/2022]</font> Our updated results show that SayCan combined with the improved language model (PaLM), which we refer to as PaLM-SayCan, improves the <b>robotics performance</b> of the entire system compared to a previous LLM (FLAN). PaLM-SayCan chooses the correct sequence of skills 84% of the time and executes them successfully 74% of the time, reducing errors by a half compared to FLAN.  This is particularly exciting because it represents the first time we can see how an improvement in language models translates to a similar improvement in robotics.  </li>
+                    <li><font color="#5a00b4">[8/16/2022]</font> We <a href="#open-source">open-sourced</a> a version of SayCan on a simulated tabletop environment. </li>
+                    <li> [4/4/2022] Initial release of SayCan. </li>
+                </ul>
+            </div>
+        </div> -->
+        
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <!-- <p style="text-align:center;">
+        	    	<video id="v0" width="100%" playsinline autoplay muted loop controls>
+                       <source src="img/demo_sequence_compressed.mp4" type="video/mp4">
+                   </video>
+                </p> -->
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    This report presents methods for pruning and diversifying dataset examples that strongly activate
+                    neurons in a language model, to facilitate research into understanding the behaviour of these
+                    neurons. The pruning algorithm takes a dataset example that strongly activates a specific neuron
+                    and extracts the core sentence before iteratively removing words, to find the shortest substring
+                    that preserves a similar pattern and magnitude of neuron activation. This removes extraneous
+                    information, providing a much more concise input that is easier to reason about. The extracted
+                    substring, referred to as a Minimal Activating Example (MAE), is then used as a seed for local
+                    search in the input space. Using BERT, each word in the MAE is replaced by its most probable
+                    substitutes, and neuron activation is re-assessed. This creates positive and negative inputs that
+                    shed much more light on neuron behaviour than dataset examples alone. In two case studies we
+                    identify neuron behaviours that were not obvious from the raw dataset examples using this
+                    combination of pruning and local search. These methods could facilitate and significantly speed
+                    up research into neuron behaviour in language models, which is a key aspect of model
+                    interpretability.
+                </p>
+            </div>
+        </div>
+
+
+	<!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Video
+                </h3>
+                <div class="text-center">
+                    <div style="position:relative;padding-top:56.25%;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Th6vwOtUt3k" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+            	<br>
+                <h3>
+                    Approach
+                </h3>
+                <p class="text-justify">
+By approaching the neural network, we scare it into showing its activations.          </div>  
+
+<p style="text-align:center;">
+    <image src="img/Example.png"  class="img-responsive" height="600px">
+</p>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Results
+                </h3>
+		<p class="text-justify">
+		We found that when we ran the code, the results came out.
+		</p>
+		
+                <p style="text-align:center;">
+                    <image src="img/graph_10_examples_n_20.png"  class="img-responsive" height="600px">
+                </p>
+	        </div>
+        </div>
+
+
+         <!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation 
+                </h3> <a href="https://arxiv.org/abs/2204.01691">[arxiv version]</a>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly>
+@inproceedings{acl2023interpretllmn,
+    title={Interpreting Large Language Model Neurons},
+    author={Anonymous authors},
+    booktitle={ACL submission},
+    year={2023}
+}</textarea>
+                </div>
+            </div>
+             
+        </div> -->
+
+
+         <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    <font color="#5a00b4">Models used in the paper</font>
+                </h3>
+               <font color="#5a00b4">The models are available...<a href="https://huggingface.co/gpt2">[gpt-2]</a></font>
+            </div>
+            <br/><br/>
+        </div>
+
+
+         <!-- <div class="row">
+            <div id="open-source" class="col-md-8 col-md-offset-2">
+                <h3>
+                    <font color="#5a00b4">Open Source</font>
+                </h3>
+              <font color="#5a00b4">We open source a version of SayCan that works with a simulated tabletop environment. <a href="https://github.com/google-research/google-research/tree/master/saycan">[tabletop saycan] </a> </font>
+              <p style="text-align:center;">
+                    <img src="img/open_source_tabletop.png" class="img-responsive" height="600px">
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Acknowledgements
+                </h3>
+                <p class="text-justify">
+The authors would like to thank Fred Alcober, Yunfei Bai, Matt Bennice, Maarten Bosma, Justin Boyd, Bill Byrne, Kendra Byrne, Noah Constant, Pete Florence, Laura Graesser, Rico Jonschkowski, Daniel Kappler, Hugo Larochelle, Benjamin Lee, Adrian Li, Maysam Moussalem, Suraj Nair, Jane Park, Evan Rapoport, Krista Reymann, Jeff Seto, Dhruv Shah, Ian Storz, Razvan Surdulescu, Tom Small, Jason Wei, and Vincent Zhao for their help and support in various aspects of the project.
+                    <br><br>
+                The website template was borrowed from <a href="http://jonbarron.info/">Jon Barron</a>.
+                </p>
+            </div>
+        </div> -->
+    </div>
+    <!-- 100% privacy friendly analytics -->
+<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+</body>
+</html>

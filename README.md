@@ -12,4 +12,4 @@ Given an dataset example that is highly activating to a given neuron, the algori
 
 For example, given an input like text #0 for [this neuron](https://lexoscope.io/solu-8l-old/3/1.html) the algorithm produces and visualises a more diverse set of prompts, to give better insight into neuron behaviour.
 
-![An example visualisation](Example.png)
+![An example visualisation](img/Example.png)
