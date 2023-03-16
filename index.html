@@ -74,7 +74,9 @@
     <div class="container" id="main">
         <div class="row">
             <h2 class="col-md-12 text-center">
-                <b><font size="+6">Do As I Can, Not As I Say</font></b>: </br> Grounding Language in Robotic Affordances </br> 
+                <b><font size="+6">Transformer Activation Tools: </font></b>: </br> Tools for exploring Transformer neuron behaviour, including input pruning and diversification
+
+            </br> 
                 <!--<small>
                     CoRL 2021
                 </small>-->
@@ -84,35 +86,27 @@
             <div class="col-md-12 text-center">
                 <ul class="list-inline">
                 <br>
-                <li>Michael Ahn*</li> <li>Anthony Brohan*</li> <li>Noah Brown*</li> <li>Yevgen Chebotar*</li> <li>Omar Cortes*</li> <li>Byron David*</li> <li>Chelsea Finn*</li>  <br> <li>Chuyuan Fu*</li>
-                 <li>Keerthana Gopalakrishnan*</li> <li>Karol Hausman*</li> <li>Alex Herzog*</li> <li>Daniel Ho*</li> <li>Jasmine Hsu*</li> <li>Julian Ibarz*</li> <br>
-                  <li>Brian Ichter*</li>  <li>Alex Irpan*</li> <li>Eric Jang*</li> <li>Rosario Jauregui Ruano*</li> <li>Kyle Jeffrey*</li> <li>Sally Jesmonth*</li> <li>Nikhil Joshi*</li>  <br>
-                 <li>Ryan Julian*</li> <li>Dmitry Kalashnikov*</li> <li>Yuheng Kuang*</li> <li>Kuang-Huei Lee*</li> <li>Sergey Levine*</li> <li>Yao Lu*</li> <li>Linda Luu*</li> <li>Carolina Parada*</li> <br>
-                 <li>Peter Pastor*</li> <li>Jornell Quiambao*</li> <li>Kanishka Rao*</li> <li>Jarek Rettinghouse*</li> <li>Diego Reyes*</li> <li>Pierre Sermanet*</li> <li>Nicolas Sievers*</li> <br>
-                 <li>Clayton Tan*</li> <li>Alexander Toshev*</li> <li>Vincent Vanhoucke*</li> <li>Fei Xia*</li> <li>Ted Xiao*</li> <li>Peng Xu*</li> <li>Sichun Xu*</li> <li>Mengyuan Yan*</li> <li>Andy Zeng*</li>
+                <li>Anonymous authors*</li>
                 <br><br>
-                    <a href="http://g.co/robotics">
-                    <image src="img/robotics-at-google.png" height="40px"> Robotics at Google</a>
+                    <!-- <a href="http://g.co/robotics">
+                    <image src="img/robotics-at-google.png" height="40px"> Apart Research</a>
                     <a href="https://everydayrobots.com">
-                    <image src="img/EverydayRobots2.gif" height="40px"> Everyday Robots</a> <br><br>
-                    * Authors listed in alphabetical order (see paper appendix for contribution statement).
+                    <image src="img/EverydayRobots2.gif" height="40px"> Everyday Robots</a> <br><br> -->
+                    * Authors anonymized for review
                 </ul>
             </div>
         </div>
-
 
         <div class="row">
                 <div class="col-md-4 col-md-offset-4 text-center">
                     <ul class="nav nav-pills nav-justified">
                         <li>
-                            <a href="assets/palm_saycan.pdf">
+                            <a href="assets/transformer-activation-tools.pdf">
                             <image src="img/paper_small.png" height="60px">
-                            <image src="img/new.png" height="20px" class="imtip">
                                 <h4><strong>Paper</strong></h4>
                             </a>
                         </li>
-
-                        <li>
+                    <!-- <li>
                             <a href="https://youtu.be/ysFav0b472w">
                             <image src="img/youtube_icon.png" height="60px">
                                 <h4><strong>Video</strong></h4>
@@ -124,27 +118,18 @@
                                 <image src="img/new.png" height="20px" class="imtip">
                                 <h4><strong>Blogpost</strong></h4>
                             </a>
-                        </li>
+                        </li> 
                          <li>
                             <a href="https://github.com/google-research/google-research/tree/master/saycan">
                             <image src="img/github.png" height="60px">
-                                <image src="img/new.png" height="20px" class="imtip">
                                 <h4><strong>Code</strong></h4>
                             </a>
-                            <li>
-                            <a href="https://sites.research.google/palm-saycan">
-                            <image src="img/demo.png" height="60px">
-                                <image src="img/new.png" height="20px" class="imtip">
-                                <h4><strong>Demo</strong></h4>
-                            </a>
-                        </li> 
-                        </li> 
+                        </li> -->
                     </ul>
                 </div>
         </div>
 
-
-         <div class="row">
+         <!-- <div class="row">
             <div class="col-md-8 col-md-offset-2">
            
                 <h3>
@@ -152,41 +137,41 @@
                 </h3>
                 <p class="text-justify">
 
-                  
                 <ul>
                     <li> <font color="#5a00b4">[8/16/2022]</font> We integrated SayCan with <a href="https://ai.googleblog.com/2022/04/pathways-language-model-palm-scaling-to.html">Pathways Language Model (PaLM)</a>, and updated the results. We also added <a href="#new-capability"> new capabilities</a> including drawer manipulation, chain of thought prompting and multilingual instructions. You can see all the new results in the updated <a href="assets/palm_saycan.pdf">paper</a>.</li>
                     <li><font color="#5a00b4">[8/16/2022]</font> Our updated results show that SayCan combined with the improved language model (PaLM), which we refer to as PaLM-SayCan, improves the <b>robotics performance</b> of the entire system compared to a previous LLM (FLAN). PaLM-SayCan chooses the correct sequence of skills 84% of the time and executes them successfully 74% of the time, reducing errors by a half compared to FLAN.  This is particularly exciting because it represents the first time we can see how an improvement in language models translates to a similar improvement in robotics.  </li>
                     <li><font color="#5a00b4">[8/16/2022]</font> We <a href="#open-source">open-sourced</a> a version of SayCan on a simulated tabletop environment. </li>
                     <li> [4/4/2022] Initial release of SayCan. </li>
                 </ul>
-
             </div>
-        </div>
+        </div> -->
         
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <p style="text-align:center;">
+                <!-- <p style="text-align:center;">
         	    	<video id="v0" width="100%" playsinline autoplay muted loop controls>
                        <source src="img/demo_sequence_compressed.mp4" type="video/mp4">
                    </video>
-                </p>
+                </p> -->
                 <h3>
                     Abstract
                 </h3>
                 <p class="text-justify">
-Large language models can encode a wealth of semantic knowledge about the world. Such knowledge could in principle be extremely useful to robots aiming to act upon high-level, temporally extended instructions expressed in natural language.
-However, a significant weakness of language models is that they lack contextual grounding, which makes it difficult to leverage them for decision making within a given real-world context. 
-For example, asking a language model to describe how to clean a spill might result in a reasonable narrative, but it may not be applicable to a particular agent, such as a robot, that needs to perform this task in a particular environment. 
-We propose to provide this grounding by means of pretrained behaviors, which are used to condition the model to propose natural language actions that are both feasible and contextually appropriate. 
-The robot can act as the language model’s “hands and eyes,” while the language model supplies high-level semantic knowledge about the task. 
-We show how low-level tasks can be combined with large language models so  that  the  language  model  provides  high-level  knowledge about the procedures for performing complex and temporally extended instructions,  while  value  functions  associated  with  these  tasks  provide  the  grounding necessary to connect this knowledge to a particular physical environment. 
-We evaluate our method on a number of real-world robotic tasks, where we show that this approach is capable of completing long-horizon,  abstract,  natural language instructions on a mobile manipulator. 
-                </p>
-             <p style="text-align:center;">
-        	    	<video id="v0" width="100%" playsinline autoplay muted loop controls>
-                       <source src="img/palm_saycan_teaser_compressed.mp4" type="video/mp4">
-                   </video>
+                    This report presents methods for pruning and diversifying dataset examples that strongly activate
+                    neurons in a language model, to facilitate research into understanding the behaviour of these
+                    neurons. The pruning algorithm takes a dataset example that strongly activates a specific neuron
+                    and extracts the core sentence before iteratively removing words, to find the shortest substring
+                    that preserves a similar pattern and magnitude of neuron activation. This removes extraneous
+                    information, providing a much more concise input that is easier to reason about. The extracted
+                    substring, referred to as a Minimal Activating Example (MAE), is then used as a seed for local
+                    search in the input space. Using BERT, each word in the MAE is replaced by its most probable
+                    substitutes, and neuron activation is re-assessed. This creates positive and negative inputs that
+                    shed much more light on neuron behaviour than dataset examples alone. In two case studies we
+                    identify neuron behaviours that were not obvious from the raw dataset examples using this
+                    combination of pruning and local search. These methods could facilitate and significantly speed
+                    up research into neuron behaviour in language models, which is a key aspect of model
+                    interpretability.
                 </p>
             </div>
         </div>
@@ -213,28 +198,7 @@ We evaluate our method on a number of real-world robotic tasks, where we show th
                     Approach
                 </h3>
                 <p class="text-justify">
-                Imagine a robot operating in a kitchen that is capable of executing skills such as "pick up the coffee cup" or "go to the sink".
-To get the robot to use these skills to perform a complex task (e.g. "I spilled my drink, can you help?"), the user could manually break it up into steps consisting of these atomic commands. 
-			However,this would be exceedingly tedious. A language model can split the high-level instruction ("I spilled my drink, can you help?") into sub-tasks, but it cannot do that effectively unless it has the context of what the robot is capable of given the abilities, current state of the robot and its environment.
-<br><br>
-When querying existing large language models, we see that a language model queried with "I spilled my drink, can you help?" may respond with "You could try using a vaccuum cleaner" or "I'm sorry, I didn't mean to spill it".
-                <p style="text-align:center;">
-        	    <image src="img/gpt3-cropped2.png" class="img-responsive">
-                </p>
-While these responses sound reasonable, they are not feasible to execute with the robot's capabilities in its current environment.  
-<br><br>
-The main principle that we use to connect LLMs to physical tasks is to observe that, in addition of asking the LLM to simply interpret an instruction, we can use it to score the likelihood that an individual skill makes progress towards completing the high-level instruction.
-Furthermore, if each skill has an accompanying affordance function that quantifies how likely it is to succeed from the current state (such as a learned value function), its value can be used to weight the skill's likelihood.
-                <p style="text-align:center;">
-        	    <image src="img/saycan-llm.gif" class="img-responsive">
-                </p>
-<br><br>
-Once the skill is selected, we execute it on the robot, the process proceeds by iteratively selecting a task and appending it to the instruction.
-Practically, we structure the planning as a dialog between a user and a robot, in which a user provides the high level-instruction, e.g. "How would you bring me a coke can?" and the language model responds with an explicit sequence e.g. "I would: 1. Find a coke can, 2. Pick up the coke can, 3. Bring it to you, 4. Done".  
-                <p style="text-align:center;">
-        	    <image src="img/saycan.png" class="img-responsive">        	   
-                </p>
-In summary, given a high-level instruction, SayCan combines probabilities from a language model (representing the probability that a skill is useful for the instruction) with the probabilities from a value function (representing the probability of successfully executing said skill) to select the skill to perform. This emits a skill that is both possible and useful. The process is repeated by appending the selected skill to robot response and querying the models again, until the output step is to terminate.                
+            However, this would be exceedingly tedious. A language model can split the high-level instruction ("I spilled my drink, can you help?") into sub-tasks, but it cannot do that effectively unless it has the context of what the robot is capable of given the abilities, current state of the robot and its environment.
             </div>
         </div>
 
@@ -249,163 +213,49 @@ In summary, given a high-level instruction, SayCan combines probabilities from a
 			langauge instructions. Below we show some highlights of the results.
 		</p>
 		
-		<p class="text-justify">
-			We visualize the decision making process of SayCan. The blue bar indicates (normalized) LLM probability and the red bar 
-			indicates (normalized) probability of 
-			successful execution of selected skills. The combined score is in green bar, 
-			and the algorithm choose the skill with highest combined score. This visualization
-			highlights the interpretability of SayCan.
-		</p>
-		    
-		<p class="text-justify">
-			Given the task "I spilled my coke, can you bring me something to clean it up?", SayCan successfully planned and executed the following 
-			steps 1. Find a sponge 2. Pick up the sponge
-			3. Bring it to you 4. Done. As shown below:
-	        </p>
                 <p style="text-align:center;">
                     <image src="img/qualitative_1.png"  class="img-responsive" height="600px">
                 </p>
 			
-		
-		<p class="text-justify">
-			However, if we slightly tweak the task to "I spilled my coke, can you bring me a replacement", SayCan planned the following steps instead
-			1. Find a coke can 2. Pick up the coke can
-			3. Bring it to you 4. Done. This highlights that SayCan is able to leverage the large capacity of LLMs, 
-			where their semantic knowledge about the world can be useful both for interpreting instructions
-			and understanding how to execute them.
-	        </p>
-			
-		  <p style="text-align:center;">
-                    <image src="img/qualitative_2.png"  class="img-responsive" height="600px">
-                </p>
-			  
-		<p> In the next example, SayCan leverages the ability of the affordances to "override" the language model; though the language model believes picking up the sponge is the right skill, the affordances are aware this isn't possible and instead "find a sponge" is chosen. This highlights the necessity of affordance grounding.
-		 <p style="text-align:center;">
-                    <image src="img/embodiment_example.png"  class="img-responsive" height="600px">
-                </p>
-			  
-                <p class="text-justify">
-		    The proposed approach achieves an overall plan success rate of 84% and execution success rate of 74% of 101 tasks,  <font color="#5a00b4"> which is 14% and 13% higher than our initial release</font>. For more details, please refer to 
-			our paper.  We show that a robot’s performance can be improved simply by enhancing the underlying language model.
-		</p>
-		<p style="test-align:center;">
-					<video id="v0" width="100%" playsinline autoplay muted loop>
-                       <source src="img/mosaic_16_demo_white_compat.mp4" type="video/mp4">
-                   </video>		
-               </p>
-		<p class="text-justify">
-		The proposed method can scale to long horizon tasks involving multiple steps, for example, for the task "I spilled my coke on the table,
-			how would you throw it away and bring me something to help clean", the robot successfully planned and execute 8 steps. The execution 
-			and planning process are shown in the video below.
-		</p>
-		<p style="test-align:center;">
-					<video id="v0" width="100%" playsinline muted loop controls>
-                       <source src="img/demo_sequence_compressed.mp4" type="video/mp4">
-                   </video>		
-        </p>
-		<p class="text-justify">
-
-         For the task "I just worked out, can you bring me a drink and a snack to recover?, the execution 
-			and planning process are shown in the video below.
-		</p>
-        <p style="test-align:center;">
-					<video id="v0" width="100%" playsinline muted loop controls>
-                       <source src="img/demo_sequence2_compressed.mp4" type="video/mp4">
-                   </video>		
-        </p>
-        <p class="text-justify">
-
-         In the next example, we show SayCan is able to plan and execute a very long-horizon task involving 16 steps.
-		</p>
-        <p style="test-align:center;">
-					<video id="v0" width="100%" playsinline muted loop controls>
-                       <source src="img/demo_sequence3_compressed.mp4" type="video/mp4">
-                   </video>		
 
 	    </div>
         </div>
             
-       
-
-
-         <div class="row">
-            <div id="new-capability" class="col-md-8 col-md-offset-2">
-                <h3>
-                    <font color="#5a00b4">New Capabilities</font>
-                </h3>
-                <p>
-                <font color="#5a00b4">PaLM-SayCan enables new capabilities. First, we show that it is very easy to incorporate new skills into the system, and use drawer manipulation as an example. Second, we show by leveraging chain of thought reasoning, we are able to solve tasks that requires reasoning. Finally we show the system can work with multilingual queries, without explicitly being designed to.</font>
-            </p>
-
-                
-                <font color="#5a00b4">PaLM-SayCan is capable of integrating new skills by simply adding the new skills as options for the LLM and provide accompanying value functions and add an example in the prompt with that skill. For example, with the skills open, close, and go to the drawer, PaLM-SayCan is capable of solving tasks such as “restock the coke and pepsi into the drawer”.</font>
-
-                <p style="test-align:center;">
-                    <video id="v0" width="100%" playsinline muted loop controls>
-                       <source src="img/saycan_drawer_compressed_1.mp4" type="video/mp4">
-                   </video>     
-                </p>
-
-                <font color="#5a00b4">It can also solve the task "Bring me the rice chips from the drawer". Note the robot only has one arm, so it needs to plan a long sequence to first take rice chips out of drawer and place on counter, and then pick it up again after closing the drawer. </font>
-
-                <p style="test-align:center;">
-                    <video id="v0" width="100%" playsinline muted loop controls>
-                       <source src="img/saycan_drawer_compressed_2.mp4" type="video/mp4">
-                   </video>     
-                </p>
-
-                <p>
-                <font color="#5a00b4">SayCan can be integrated with recent work improving LLM reasoning, such as <a href="https://arxiv.org/abs/2201.11903">Chain of Thought</a>. With chain-of-thought prompting, PaLM-SayCan is able to handle tasks that require reasoning.</font>
-            </p>
-
-                <p style="test-align:center;">
-                    <video id="v0" width="100%" playsinline muted loop controls>
-                       <source src="img/saycan_cot_compressed.mp4" type="video/mp4">
-                   </video>     
-                </p>
-
-                <p>
-                <font color="#5a00b4">While not explicitly designed to work with multilingual queries, PaLM-SayCan is able to handle them. The LLM was trained on a multilingual corpus and thus SayCan can handle multilingual queries other than English. There is almost no performance drop on planning success rate when changing the queries from English to Chinese, French and Spanish.</font>
-            </p>
-
-                <p>
-                <font color="#5a00b4">As presented herein, PaLM-SayCan only receives environmental feedback through value functions at the current decision step, meaning if a skill fails or the environment changes, the necessary feedback may not be available. Owing to the extendibility and the natural language interface, follow up work builds upon PaLM-SayCan to enable closed-loop planning by leveraging environment feedback (from e.g., success detectors, scene descriptors, or even human feedback) through an <a href="https://innermonologue.github.io/"> inner monologue </a>.</font>
-            </p>
 
             </div>
         </div>
 
 
-         <div class="row">
+         <!-- <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     Citation 
                 </h3> <a href="https://arxiv.org/abs/2204.01691">[arxiv version]</a>
                 <div class="form-group col-md-10 col-md-offset-1">
                     <textarea id="bibtex" class="form-control" readonly>
-@inproceedings{saycan2022arxiv,
-    title={Do As I Can and Not As I Say: Grounding Language in Robotic Affordances},
-    author={Michael Ahn and Anthony Brohan and Noah Brown and Yevgen Chebotar and Omar Cortes and Byron David and Chelsea Finn and Chuyuan Fu and Keerthana Gopalakrishnan and Karol Hausman and Alex Herzog and Daniel Ho and Jasmine Hsu and Julian Ibarz and Brian Ichter and Alex Irpan and Eric Jang and Rosario Jauregui Ruano and Kyle Jeffrey and Sally Jesmonth and Nikhil Joshi and Ryan Julian and Dmitry Kalashnikov and Yuheng Kuang and Kuang-Huei Lee and Sergey Levine and Yao Lu and Linda Luu and Carolina Parada and Peter Pastor and Jornell Quiambao and Kanishka Rao and Jarek Rettinghouse and Diego Reyes and Pierre Sermanet and Nicolas Sievers and Clayton Tan and Alexander Toshev and Vincent Vanhoucke and Fei Xia and Ted Xiao and Peng Xu and Sichun Xu and Mengyuan Yan and Andy Zeng},
-    booktitle={arXiv preprint arXiv:2204.01691},
-    year={2022}
+@inproceedings{acl2023interpretllmn,
+    title={Interpreting Large Language Model Neurons},
+    author={Anonymous authors},
+    booktitle={ACL submission},
+    year={2023}
 }</textarea>
                 </div>
             </div>
              
-        </div>
+        </div> -->
 
 
          <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    <font color="#5a00b4">Dataset</font>
+                    <font color="#5a00b4">Models used in the paper</font>
                 </h3>
-               <font color="#5a00b4">SayCan dataset v0 contains mapping from natural language user instructions to one possible solution. It is available under CC BY 4.0 license. <a href="https://github.com/say-can/say-can.github.io/tree/main/data">[v0]</a></font>
+               <font color="#5a00b4">The models are available...<a href="https://github.com/say-can/say-can.github.io/tree/main/data">[v0]</a></font>
             </div>
         </div>
 
 
-         <div class="row">
+         <!-- <div class="row">
             <div id="open-source" class="col-md-8 col-md-offset-2">
                 <h3>
                     <font color="#5a00b4">Open Source</font>
@@ -428,7 +278,7 @@ The authors would like to thank Fred Alcober, Yunfei Bai, Matt Bennice, Maarten 
                 The website template was borrowed from <a href="http://jonbarron.info/">Jon Barron</a>.
                 </p>
             </div>
-        </div>
+        </div> -->
     </div>
 </body>
 </html>
