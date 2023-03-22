@@ -100,7 +100,7 @@
                     <ul class="nav nav-pills nav-justified">
                         <li>
                             <a href="">
-                            <image src="img/paper_small.png" height="60px">
+                            <image src="img/paper-tb.png" height="60px" width="40px">
                                 <h4><strong>Paper (not available yet)</strong></h4>
                             </a>
                         </li>
@@ -156,20 +156,23 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-                    This report presents methods for pruning and diversifying dataset examples that strongly activate
-                    neurons in a language model, to facilitate research into understanding the behaviour of these
-                    neurons. The pruning algorithm takes a dataset example that strongly activates a specific neuron
-                    and extracts the core sentence before iteratively removing words, to find the shortest substring
-                    that preserves a similar pattern and magnitude of neuron activation. This removes extraneous
-                    information, providing a much more concise input that is easier to reason about. The extracted
-                    substring, referred to as a Minimal Activating Example (MAE), is then used as a seed for local
-                    search in the input space. Using BERT, each word in the MAE is replaced by its most probable
-                    substitutes, and neuron activation is re-assessed. This creates positive and negative inputs that
-                    shed much more light on neuron behaviour than dataset examples alone. In two case studies we
-                    identify neuron behaviours that were not obvious from the raw dataset examples using this
-                    combination of pruning and local search. These methods could facilitate and significantly speed
-                    up research into neuron behaviour in language models, which is a key aspect of model
-                    interpretability.
+                    Understanding the function of MLP neurons within Language Models is essen-
+tial for mechanistic interpretability research. Unlike Vision Models, there are no
+feature visualization techniques available, so this work relies on analyzing token-
+level activations of a neuron on highly-activating dataset examples. These exam-
+ples often contain irrelevant information and lack variety. While the importance
+of highly-activating tokens may be clear, the influence of other tokens with lower
+activation can only be inferred by looking for correlations across many exam-
+ples. This work seeks to provide a better understanding of MLP neurons within
+Language Models by analyzing token-level activations of a neuron on highly-
+activating dataset examples. To increase the variety and relevance of these exam-
+ples, we present tools for automatically generating additional inputs from a seed
+dataset. These tools include pruning extraneous information, computing token
+saliency to understand which tokens are important for neuron activation, and gen-
+erating counterfactual examples by replacing one or more important tokens with
+other high-probability substitutes using BERT. We accelerates interpretability re-
+search by making neurons easier to interpret, providing a step towards automated
+neuron analysis in neural networks.
                 </p>
             </div>
         </div>
@@ -193,10 +196,31 @@
             <div class="col-md-8 col-md-offset-2">
             	<br>
                 <h3>
-                    Approach
+Approach
                 </h3>
                 <p class="text-justify">
-By approaching the neural network, we scare it into showing its activations.          </div>  
+                    We begin by introducing the prune function, which takes a prompt with a maximally activating token
+                    and finds a subset of the prompt with the highest possible neuron activation for the key token. We
+                    then measure the importance of each token, and the relative activation of each token in a generated
+                    set of prompts, which can then be used to visualise the neuron’s response
+                    The prune function takes a prompt with the highest neuron activation for a particular neuron on
+                    the key token, and then splits the prompt into sentences. It then takes all sentences up to and
+                    including the sentence containing the token with the highest neuron activation and creates a new,
+                    pruned prompt. We then truncate the smaller context of the prompt up to the key token, and measure
+                    the activation of the neuron on the key token to determine the change in activation. If the change
+                    is a decrement larger than a user-defined threshold, typically around -50%, then the prior token is
+                    added to the truncated prompt. This process is then repeated until the activation of the key token is
+                    sufficient to pass the condition. <br /><br />
+                    Importance and relative activation are then computed for each token in a prompt. The importance
+                    Ik of the kth token is calculated as Ik = 1 − (amasked/akey ), where amasked is the activation of the
+                    neuron on the key token when token k is masked, and akey is the activation of the neuron on the key
+                    token on the unmasked prompt. The relative activation R of a token is calculated as R = ak/akey ,
+                    and is used to visualise the neuron’s response.<br /><br />
+                    Finally, the pruned prompt is used to generate more varied inputs to explore the neuron’s activations.
+                    This is done by masking each important token in turn and generating likely substitutions for that
+                    token, creating new prompts with each of the top n substitutes, provided they cross a probability
+                    threshold. The new prompts then have the importance and relative activation computed, and the
+                    resulting visualisation provides insights into the neuron’s behaviour.          </div>  
 
 <p style="text-align:center;">
     <image src="img/Example.png"  class="img-responsive" height="600px">
@@ -205,7 +229,7 @@ By approaching the neural network, we scare it into showing its activations.    
         </div>
 
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     Results
@@ -218,7 +242,7 @@ By approaching the neural network, we scare it into showing its activations.    
                     <image src="img/graph_10_examples_n_20.png"  class="img-responsive" height="600px">
                 </p>
 	        </div>
-        </div>
+        </div> -->
 
 
          <!-- <div class="row">
