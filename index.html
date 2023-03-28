@@ -72,8 +72,8 @@
     <div class="container" id="main">
         <div class="row">
             <h2 class="col-md-12 text-center">
-                <b><font size="+6">Transformer Activation Tools: </font></b>: </br> Tools for exploring Transformer neuron behaviour, including input pruning and diversification
-
+                <b><font size="+6">Interpretaing Neurons in LLMs</font></b>
+            </h2>
             </br> 
                 <!--<small>
                     CoRL 2021
@@ -90,7 +90,7 @@
                     <image src="img/robotics-at-google.png" height="40px"> Apart Research</a>
                     <a href="https://everydayrobots.com">
                     <image src="img/EverydayRobots2.gif" height="40px"> Everyday Robots</a> <br><br> -->
-                    * Authors anonymized for review
+                    * Paper under double-blind review
                 </ul>
             </div>
         </div>
@@ -101,7 +101,7 @@
                         <li>
                             <a href="">
                             <image src="img/paper-tb.png" height="60px" width="40px">
-                                <h4><strong>Paper (not available yet)</strong></h4>
+                                <h4><strong>Paper (not available)</strong></h4>
                             </a>
                         </li>
                     <!-- <li>
@@ -156,23 +156,23 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-                    Understanding the function of MLP neurons within Language Models is essen-
-tial for mechanistic interpretability research. Unlike Vision Models, there are no
-feature visualization techniques available, so this work relies on analyzing token-
-level activations of a neuron on highly-activating dataset examples. These exam-
-ples often contain irrelevant information and lack variety. While the importance
-of highly-activating tokens may be clear, the influence of other tokens with lower
-activation can only be inferred by looking for correlations across many exam-
-ples. This work seeks to provide a better understanding of MLP neurons within
-Language Models by analyzing token-level activations of a neuron on highly-
-activating dataset examples. To increase the variety and relevance of these exam-
-ples, we present tools for automatically generating additional inputs from a seed
-dataset. These tools include pruning extraneous information, computing token
-saliency to understand which tokens are important for neuron activation, and gen-
-erating counterfactual examples by replacing one or more important tokens with
-other high-probability substitutes using BERT. We accelerates interpretability re-
-search by making neurons easier to interpret, providing a step towards automated
-neuron analysis in neural networks.
+                    Understanding the function of MLP neurons within Language Models is essential
+for mechanistic interpretability research. Current approaches rely on techniques
+analyzing token-level activations of a neuron on highly-activating dataset exam-
+ples. These examples often contain irrelevant information and need more variety.
+While the importance of highly-activating tokens may be evident, the influence
+of other tokens with lower activation can only be inferred by looking for cor-
+relations across many examples. Additionally, requiring researchers to analyze
+neurons manually is not scalable to Large Language Models (LLMs). This work
+introduces simple tools to prune and augment dataset examples and measure the
+importance of one token for neuron activation on another token, which we com-
+bine with a method for building interpretable graph representations that capture
+the behaviour of a neuron from the processed dataset examples fully automati-
+cally. These graphs can be used to predict neuron activation on text, allowing us
+to directly measure how well they represent the neuron’s behaviour by comparing
+the predictions to observed activations of a neuron. This method, therefore, rep-
+resents a step towards scalable interpretability methods by allowing us to convert
+neurons in an LLM to interpretable representations of measurable quality.
                 </p>
             </div>
         </div>
@@ -194,6 +194,10 @@ neuron analysis in neural networks.
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
+
+<p style="text-align:center;">
+    <image src="img/architecture.png"  class="img-responsive" height="600px">
+</p>
             	<br>
                 <h3>
 Approach
@@ -220,11 +224,8 @@ Approach
                     This is done by masking each important token in turn and generating likely substitutions for that
                     token, creating new prompts with each of the top n substitutes, provided they cross a probability
                     threshold. The new prompts then have the importance and relative activation computed, and the
-                    resulting visualisation provides insights into the neuron’s behaviour.          </div>  
+                    resulting visualisation provides insights into the neuron’s behaviour.         </p> </div>  
 
-<p style="text-align:center;">
-    <image src="img/Example.png"  class="img-responsive" height="600px">
-</p>
 
         </div>
 
