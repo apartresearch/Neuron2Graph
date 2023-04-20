@@ -158,14 +158,14 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-                    Understanding the function of individual neurons within language models is essential for mechanistic interpretability research. We propose Neuron to Graph
+                    Understanding the function of individual neurons within language models is essential for mechanistic interpretability research. We propose Neuron to Graph
 (N2G), a tool which takes a neuron and its dataset examples, and automatically
-distills the neuron’s behaviour on those examples to an interpretable graph. This
-presents a less labour intensive approach to interpreting neurons than current manual methods, that will better scale these methods to large language models (LLMs). We use truncation and
-saliency methods to only present the important tokens, and augment the dataset examples with more diverse samples to better capture the extent of neuron behaviour.
+distills the neuron's behaviour on those examples to an interpretable graph. This
+presents a less labour intensive approach to interpreting neurons than current manual methods, that will better scale these methods to large language models (LLMs). We use truncation and
+saliency methods to only present the important tokens, and augment the dataset examples with more diverse samples to better capture the extent of neuron behaviour.
 These graphs can be visualised to aid manual interpretation by researchers, but
-can also output token activations on text to compare to the neuron’s ground truth
-activations for automatic validation. N2G represents a step towards scalable interpretability methods by allowing us to convert neurons in an LLM to interpretable
+can also output token activations on text to compare to the neuron's ground truth
+activations for automatic validation. N2G represents a step towards scalable interpretability methods by allowing us to convert neurons in an LLM to interpretable
 representations of measurable quality.
                 </p>
             </div>
@@ -209,10 +209,10 @@ prompts are converted to a graph. The output graph is a real example which activ
 <br>
 <p style="text-align:center;">
     <image src="img/eval_table.png"  class="img-responsive" height="600px">
-        <i>Table 1: Precision, recall and F1-score of the neuron graphs’ token-level predictions of neuron firing
+        <i>Table 1: Precision, recall and F1-score of the neuron graphs' token-level predictions of neuron firing
             compared to ground truth on held-out test data, for 50 random neurons from each layer of the model.
-            Tokens on which the real neuron fired and tokens on which it didn’t fire are evaluated separately as
-            there are generally many more tokens on which a neuron didn’t fire, making it trivially easy to get
+            Tokens on which the real neuron fired and tokens on which it didn't fire are evaluated separately as
+            there are generally many more tokens on which a neuron didn't fire, making it trivially easy to get
             near-perfect scores by always predicting the neuron will not fire.</i>
 
 </p>
