@@ -1,4 +1,4 @@
-# Transformer-Activation-Tools
+# Repository for Transformer-Activation-Tools
 
 Tools for exploring Transformer neuron behaviour, including input pruning and diversification, measuring token importance, and visualising the results.
 
