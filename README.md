@@ -1,6 +1,6 @@
-# Repository for N2G: A scalable approach for quantifying interpretable neuron representations in Large Language Models 
+# Repository for Neuron to Graph: Interpreting Language Model Neurons at Scale
 
-Authors: Alex Foote Neel Nanda, Esben Kran, Ionnis Konstas, Fazl Barez
+Authors: Alex Foote Neel Nanda, Esben Kran, Ionnis Konstas, Shay B. Cohen and Fazl Barez
 
 Accepted at RTML workshop at ICLR 2023
 
