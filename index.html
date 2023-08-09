@@ -6,28 +6,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Transformer Activation Tools</title>
+    <title>Neuron2Graph</title>
 
-    <meta name="description" content="Transformer Activation Tools: Tools for exploring Transformer neuron behaviour, including input pruning and diversification">
+    <meta name="description" content="N2G: A Scalable Approach for Quantifying Interpretable Neuron Representation in Large Language Models">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <base href="/"> -->
 
         <!--FACEBOOK-->
-    <meta property="og:image" content="https://transformer-activation-tools.pages.dev//img/graph_10_examples_n_20.png">
+    <meta property="og:image" content="https://transformer-activation-tools.pages.dev/img/N2G.png">
     <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="682">
-    <meta property="og:image:height" content="682">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://transformer-activation-tools.pages.dev/"/>
-    <meta property="og:title" content="Transformer Activation Tools" />
-    <meta property="og:description" content="Project page for Transformer Activation Tools: Tools for exploring Transformer neuron behaviour, including input pruning and diversification." />
+    <meta property="og:title" content="Neuron2Graph" />
+    <meta property="og:description" content="Project page for Neuron2Graph." />
 
         <!--TWITTER-->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="SayCan" />
-    <meta name="twitter:description" content="Project page for Transformer Activation Tools: Tools for exploring Transformer neuron behaviour, including input pruning and diversification." />
-    <meta name="twitter:image" content="https://transformer-activation-tools.pages.dev//img/graph_10_examples_n_20.png" />
+    <meta name="twitter:title" content="Neuron2Graph" />
+    <meta name="twitter:description" content="Project page for Neuron2Graph." />
+    <meta name="twitter:image" content="https://transformer-activation-tools.pages.dev/img/N2G.png" />
 
 
 <!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
@@ -72,7 +70,9 @@
     <div class="container" id="main">
         <div class="row">
             <h2 class="col-md-12 text-center">
-                <b><font size="+6">Interpretaing Neurons in LLMs</font></b>
+                <b><font size="+4">Neuron to Graph</font></b>
+                <br>
+                <b><font size="+2">Interpreting Language Model Neurons at Scale</font></b>
             </h2>
             </br> 
                 <!--<small>
@@ -84,13 +84,13 @@
             <div class="col-md-12 text-center">
                 <ul class="list-inline">
                 <br>
-                <li>Alex Foote<sup>1</sup>*, Neel Nanda<sup>2</sup>, Esben Kran<sup>1</sup>, Ionnis Konstas<sup>3</sup>, Fazl Barez<sup>1,3,4</sup>*</li>
+                <li>Alex Foote<sup>1</sup>*, Neel Nanda<sup>2</sup>, Esben Kran<sup>1</sup>, Ionnis Konstas<sup>3</sup>, Shay Cohen<sup>4</sup>, Fazl Barez<sup>1,4,5</sup>*</li>
                 <br><br>
                     <!-- <a href="http://g.co/robotics">
                     <image src="img/robotics-at-google.png" height="40px"> Apart Research</a>
                     <a href="https://everydayrobots.com">
                     <image src="img/EverydayRobots2.gif" height="40px"> Everyday Robots</a> <br><br> -->
-                    <sup>1</sup>Apart Research&#8287;&#8287;<sup>2</sup>Independent&#8287;&#8287;<sup>3</sup>Edinburgh Centre for Robotics&#8287;&#8287;<sup>4</sup>University of Oxford <br> * Equal contribution
+                    <sup>1</sup>Apart Research&#8287;&#8287;<sup>2</sup>Independent&#8287;&#8287;<sup>3</sup>School of Mathematical and Computer Sciences Heriot-Watt University&#8287;&#8287;<sup>4</sup>School of Informatics, University of Edinburgh&#8287;&#8287;<sup>5</sup>University of Oxford <br> * Equal contribution
                 </ul>
             </div>
         </div>
@@ -99,9 +99,9 @@
                 <div class="col-md-4 col-md-offset-4 text-center">
                     <ul class="nav nav-pills nav-justified">
                         <li>
-                            <a href="">
+                            <a href="https://arxiv.org/abs/2305.19911">
                             <image src="img/paper-tb.png" height="60px" width="40px">
-                                <h4><strong>Paper (not available)</strong></h4>
+                                <h4><strong>arXiv</strong></h4>
                             </a>
                         </li>
                     <!-- <li>
@@ -136,7 +136,7 @@
                 <p class="text-justify">
 
                 <ul>
-                    <li> <font color="#5a00b4">[8/16/2022]</font> We integrated SayCan with <a href="https://ai.googleblog.com/2022/04/pathways-language-model-palm-scaling-to.html">Pathways Language Model (PaLM)</a>, and updated the results. We also added <a href="#new-capability"> new capabilities</a> including drawer manipulation, chain of thought prompting and multilingual instructions. You can see all the new results in the updated <a href="assets/palm_saycan.pdf">paper</a>.</li>
+                    <li> <font color="#5a00b4">[8/16/2022]</font> We integrated SayCan with <a href="https://ai.googleblog.com/2022/04/pathways-language-model-palm-scaling-to.html">Pathways Language Model (PaLM)</a>, and updated the results. We also added <a href="#new-capability"> new capabilities</a> including drawer manipulation, chain of thought prompting and multilingual instructions. You can see all the new results in the updated <a href="assets/Neuron2Graph.pdf">paper</a>.</li>
                     <li><font color="#5a00b4">[8/16/2022]</font> Our updated results show that SayCan combined with the improved language model (PaLM), which we refer to as PaLM-SayCan, improves the <b>robotics performance</b> of the entire system compared to a previous LLM (FLAN). PaLM-SayCan chooses the correct sequence of skills 84% of the time and executes them successfully 74% of the time, reducing errors by a half compared to FLAN.  This is particularly exciting because it represents the first time we can see how an improvement in language models translates to a similar improvement in robotics.  </li>
                     <li><font color="#5a00b4">[8/16/2022]</font> We <a href="#open-source">open-sourced</a> a version of SayCan on a simulated tabletop environment. </li>
                     <li> [4/4/2022] Initial release of SayCan. </li>
@@ -156,14 +156,14 @@
                     Abstract
                 </h3>
                 <p class="text-justify">
-                    Understanding the function of individual neurons within language models is essential for mechanistic interpretability research. We propose Neuron to Graph
+                    Understanding the function of individual neurons within language models is essential for mechanistic interpretability research. We propose Neuron to Graph
 (N2G), a tool which takes a neuron and its dataset examples, and automatically
-distills the neuron’s behaviour on those examples to an interpretable graph. This
-presents a less labour intensive approach to interpreting neurons than current manual methods, that will better scale these methods to LLMs. We use truncation and
-saliency methods to only present the important tokens, and augment the dataset examples with more diverse samples to better capture the extent of neuron behaviour.
+distills the neuron's behaviour on those examples to an interpretable graph. This
+presents a less labour intensive approach to interpreting neurons than current manual methods, that will better scale these methods to large language models (LLMs). We use truncation and
+saliency methods to only present the important tokens, and augment the dataset examples with more diverse samples to better capture the extent of neuron behaviour.
 These graphs can be visualised to aid manual interpretation by researchers, but
-can also output token activations on text to compare to the neuron’s ground truth
-activations for automatic validation. N2G represents a step towards scalable interpretability methods by allowing us to convert neurons in an LLM to interpretable
+can also output token activations on text to compare to the neuron's ground truth
+activations for automatic validation. N2G represents a step towards scalable interpretability methods by allowing us to convert neurons in an LLM to interpretable
 representations of measurable quality.
                 </p>
             </div>
@@ -207,17 +207,17 @@ prompts are converted to a graph. The output graph is a real example which activ
 <br>
 <p style="text-align:center;">
     <image src="img/eval_table.png"  class="img-responsive" height="600px">
-        <i>Table 1: Precision, recall and F1-score of the neuron graphs’ token-level predictions of neuron firing
+        <i>Table 1: Precision, recall and F1-score of the neuron graphs' token-level predictions of neuron firing
             compared to ground truth on held-out test data, for 50 random neurons from each layer of the model.
-            Tokens on which the real neuron fired and tokens on which it didn’t fire are evaluated separately as
-            there are generally many more tokens on which a neuron didn’t fire, making it trivially easy to get
+            Tokens on which the real neuron fired and tokens on which it didn't fire are evaluated separately as
+            there are generally many more tokens on which a neuron didn't fire, making it trivially easy to get
             near-perfect scores by always predicting the neuron will not fire.</i>
 
 </p>
             
 <br><br>
 
-<p><b><i>This research is a work in progress</i></b></p>
+<p><b><i>Work in progress</i></b></p>
 
 <br><br>
 
