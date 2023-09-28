@@ -49,12 +49,3 @@ booktitle={arXiv},
 year={2023} 
 } 
 ```
-
-``` 
-@inproceedings{foote2023n2g,   
-title={N$2$G: A scalable approach for quantifying interpretable neuron representations in Large Language Models},   
-author={Foote, Alex and Nanda, Neel and Kran, Esben and Konstas, Ionnis and Barez, Fazl},   
-booktitle={RTML workshop ICLR},   
-year={2023} 
-} 
-```
